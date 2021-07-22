@@ -1,0 +1,25 @@
+
+/*Phần đăng kí*/
+.register{
+  width:40%;
+  height: auto;
+  margin:auto;
+}
+/* Full-width inputs */
+.text, input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* Set a style for all buttons */
+button {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 100%;
+}

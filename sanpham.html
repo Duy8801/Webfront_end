@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" type="text/css" href="sanpham.css">
+
+<!--sản phẩm-->
+<div class="container" id="sanpham" ng-app="myApp" ng-controller="Ctrl">
+    <!--T-shirt-->
+    <div style="clear: left;">
+        <h4>All Item</h4>
+        <hr>
+        <form ng-repeat="items in all | filter:searchText">
+            <div class="card" style="width:25%;float:left;height:25%">
+                <img class="card-img-top" src="{{items.img}}" alt="Card image" style="width:100%;height:100%">
+                <div class="card-body">
+                    <h6 class="card-title">{{items.name}}</h6>
+                    <p class="card-text" style="color:red">{{items.price|number}} VNĐ</p>
+                    <button class="btn btn-primary" ng-click="AddSp(items)">Buy Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+	</script>
+	<script src="https://kit.fontawesome.com/da8962266b.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js">
+	</script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="trangchu.css">
+	<script src="trangchu.js">
+	</script>
+	<title>LocalBrand</title>
+</head>
+
+<body ng-app="myApp">
+	<div class="container-fluid">
+		<header class="header topbar_ect">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+				<!-- Toggler/collapsibe Button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav" style="margin-left: 4%;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Trangchu.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!allitem">Sản Phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!contact">Contact</a>
+                        </li>
+                    </ul>
+                    <ul></ul>
+                    <ul></ul>
+                    <ul></ul>
+                    <ul></ul>
+                    <ul></ul>
+                    <ul></ul>
+                    <ul class="navbar-nav" style="margin-left:5%">
+                        <li class=" nav-item">
+                            <a class="nav-link" href="#!login" >Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!register">Đăng Kí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!lienhe" >Liên Hệ</a>
+                        </li>
+                        <li class="nav-item" style="position: relative;">
+                            <a class="nav-link" href="#!giohang">Giỏ Hàng</a>
+                        </li>
+                        <form class="form-inline" action="/action_page.php">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
+                                ng-model="searchText">
+                        </form>
+                    </ul>
+                </div>
+            </nav>
+
+            <!--Header-->
+                <div class="container">
+                    <div class="logo">
+                        <a href="./Trangchu.html"><img src="./img/logobrand.jpg" width="150px" height="150px"></a>
+                    </div>
+                </div>
+            <hr>
+
+        </header>
+    <!--hiện thị-->
+    <div ng-view></div>
+    <!-------------------Footer-------------------------------------------->
+    <footer class="site-footer" style=" margin:auto;clear: left;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>Hệ Thống Cửa Hàng</h6>
+                        
+                        <ul>
+                            <li>Quận 10 - 561 Sư Vạn Hạnh, Phường 13</li>
+                            <li> Quận Tân Bình - 136 Nguyễn Hồng Đào, Phường 14.</li>
+                            <li> Quận Tân Phú - 132 Nguyễn Sơn, Phường Phú Thọ Hòa.</li>
+                            <li> Quận 1 - 26 Lý Tự Trọng, Phường Bến Nghé.</li>
+                            <li> Quận 1 - Central Market Lê Lai, Phường Phạm Ngũ Lão.</li>
+                            <li> Quận Gò Vấp - 41 Quang Trung, Phường 10.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Mạng xã hội</h6>
+                        <ul class="footer-links">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Fanpage</h6>
+                        <ul class="footer-links">
+                            <li><a href="https://www.facebook.com/localbrand.vip/">LOCALBRAND</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div style="margin: auto;">
+                        <p class="copyright-text">Copyright © 2021.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <button onclick="topFunction()" id="myBTN" title="Go to top">Back to top</button>
+    <script>
+        app.controller('Ctrl', function ($scope, productService) {
+    $scope.all = [
+        {   
+            id:"1",
+            name: "EGG TEE ",
+            img: "./img/pic1.jpg",
+            price: 400000
+        },
+        {   
+            id:"2",
+            name: "BLACK TEE",
+            img: "./img/pic2.jpg",
+            price: 350000
+        },
+        {
+            id:"3",
+            name: "PINK TEE ",
+            img: "./img/pic3.jpg",
+            price: 400000
+        },
+        {   
+            id:"4",
+            name: "16TYPH TEE",
+            img: "./img/pic4.jpg",
+            price: 430000
+        },
+        {   
+            id:"5",
+            name: "1984 JACKET",
+            img: "./img/pic5.gif",
+            price: 650000
+        },
+        {   
+            id:"6",
+            name: "SLY JACKET",
+            img: "./img/pic6.jpg",
+            price: 535000
+        },
+        {   
+            id:"7",
+            name: "VARSITY JACKET",
+            img: "./img/pic7.jpg",
+            price: 585000
+        },
+        {   
+            id:"8",
+            name: "COACH JACKET",
+            img: "./img/pic8.gif",
+            price: 495000
+        },
+        {   
+            id:"9",
+            name: "TIME-STOP HOODIE",
+            img: "./img/pic9.jpg",
+            price: 400000
+        },
+        {   
+            id:"10",
+            name: "BASIC SWEATER",
+            img: "./img/pic10.jpg",
+            price: 500000
+        },
+        {   
+            id:"11",
+            name: "TERRY SHORT",
+            img: "./img/pic11.jpg",
+            price: 580000
+        },
+        {   
+            id:"12",
+            name: "MULTICOLOR ZIP HOODIE",
+            img: "./img/pic12.jpg",
+            price: 480000
+        },
+        {   
+            id:"13",
+            name: "MULTI-PIXEL SWEATER",
+            img: "./img/pic13.jpg",
+            price: 650000
+        },
+        {   
+            id:"14",
+            name: "CLEAR BAG",
+            img: "./img/pic14.jpg",
+            price: 550000
+        },
+        {   
+            id:"15",
+            name: "WALLET COIN",
+            img: "./img/pic15.jpg",
+            price: 490000
+        },
+        {   
+            id:"16",
+            name: "BACKPACK BLUE",
+            img: "./img/pic16.jpg",
+            price: 480000
+        }]
+    // chức năng thêm vào giỏ hàng
+    $scope.AddSp = function (currObj) {
+        productService.addProduct(currObj);
+        alert("Đã thêm 1 " + currObj.name)
+    };
+    });
+    var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>

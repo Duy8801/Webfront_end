@@ -1,0 +1,21 @@
+<div style="height:40%;width:30%;margin:auto">
+    <table class="table" style="margin: 0px;">
+        <thead>
+            <tr>
+                <th>HÌNH ẢNH</th>
+                <th>TÊN HÀNG</th>
+                <th>ĐƠN GIÁ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in spdachon">
+                <td><img src="{{item.img}}" alt="Card image" style="width:80px;height:80px"></td>
+                <td>{{item.name}}</td>
+                <td>{{item.price | number}} VNĐ</td>
+            </tr>
+        </tbody>
+    </table><br><br>
+    <span style="font-weight: bold; font-size: 18px; padding-left: 20px;">Tổng tiền: </span> {{tongtien | number : 2}}
+    VNĐ<br>
+    <button class="btn btn-primary" ng-click="TongTien()">Tính Tiền</button>
+</div>

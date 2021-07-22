@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url(../DeTaiGiuaKi/img/images.png);">
+    <div>
+        <p id="gt2" style="font-size: 20px;text-align: center;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+            
+        </p>
+        <script>
+            function ramdom1() {
+                var a = document.getElementById("gt2")
+                var A = Math.round(Math.random() * 255)
+                var B = Math.round(Math.random() * 255)
+                var C = Math.round(Math.random() * 255)
+                a.innerHTML = "CUNG CẤP CHO BẠN NHỮNG TOUR DU LỊCH VỚI MỨC GIÁ PHẢI CHĂNG"
+                /*đổi màu chữ random*/
+                a.style.color = "rgb(" + A + " , " + B + " , " + C + ")"
+                setTimeout(ramdom1, 100)
+            }
+            ramdom1()
+        </script>
+    </div>
+</body>
+</html>
