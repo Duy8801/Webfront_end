@@ -1,0 +1,23 @@
+
+<link rel="stylesheet" type="text/css" href="login.css">
+    <!--Login-->
+    <div class="login" >
+        <h2 style="text-align: center;">Đăng nhập</h2>
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input class="text" type="text" placeholder="Enter Username" name="uname" required><br>
+                <label for="psaw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit"><a href="../Trangchu.html" style="color:white;">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn"><a href="../Trangchu.html"
+                        style="color:white;">Cancel</a></button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
